@@ -3,6 +3,7 @@ import 'package:arrow_game/features/gameplay/engine/game_controller.dart';
 import 'package:arrow_game/features/progression/progress_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:arrow_game/features/home/widgets/home_title.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -22,7 +23,7 @@ void main() {
 
   testWidgets('app launches to the home screen', (tester) async {
     await pumpApp(tester);
-    expect(find.text('Arrow Game'), findsOneWidget);
+    expect(find.byType(HomeTitle), findsOneWidget);
     expect(find.text('Play'), findsOneWidget);
     expect(find.text('Levels'), findsOneWidget);
   });

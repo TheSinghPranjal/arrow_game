@@ -12,6 +12,7 @@ import '../engine/game_controller.dart';
 import '../widgets/arrow_board.dart';
 import '../widgets/game_header.dart';
 import '../widgets/game_overlays.dart';
+import '../widgets/game_scenery.dart';
 import '../widgets/hint_button.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -95,6 +96,7 @@ class _GameScreenState extends ConsumerState<GameScreen> with WidgetsBindingObse
               ? const Center(child: CircularProgressIndicator(color: SketchColors.outline))
               : Stack(
                   children: [
+                    const Positioned.fill(child: CustomPaint(painter: GameSceneryPainter())),
                     SafeArea(
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(12, 8, 12, 12),
@@ -116,17 +118,11 @@ class _GameScreenState extends ConsumerState<GameScreen> with WidgetsBindingObse
                               ],
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 4),
-                              child: Text(
-                                s.level.name,
-                                style: SketchText.heading.copyWith(fontSize: 22, color: SketchColors.muted),
-                              ),
+                              padding: const EdgeInsets.only(top: 6),
+                              child: LevelNameSign(name: s.level.name),
                             ),
                             const Expanded(
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 4),
-                                child: ArrowBoard(),
-                              ),
+                              child: Padding(padding: EdgeInsets.fromLTRB(4, 10, 4, 14), child: ArrowBoard()),
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

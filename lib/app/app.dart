@@ -9,7 +9,7 @@ class SketchArrowsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sketch Arrows',
+      title: 'Arrow Game - Sketch',
       debugShowCheckedModeBanner: false,
       theme: buildSketchTheme(),
       initialRoute: AppRoutes.home,

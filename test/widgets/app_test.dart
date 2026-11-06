@@ -22,7 +22,7 @@ void main() {
 
   testWidgets('app launches to the home screen', (tester) async {
     await pumpApp(tester);
-    expect(find.text('Sketch'), findsOneWidget);
+    expect(find.text('Arrow Game'), findsOneWidget);
     expect(find.text('Play'), findsOneWidget);
     expect(find.text('Levels'), findsOneWidget);
   });

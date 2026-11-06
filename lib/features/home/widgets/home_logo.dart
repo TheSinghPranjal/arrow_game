@@ -85,7 +85,7 @@ class _HomeLogoState extends State<HomeLogo> with SingleTickerProviderStateMixin
                 Transform.rotate(
                   angle: -0.04,
                   child: Text(
-                    'Sketch',
+                    'Arrow Game',
                     style: SketchText.title.copyWith(
                       fontSize: 58,
                       color: SketchColors.coral,
@@ -96,7 +96,7 @@ class _HomeLogoState extends State<HomeLogo> with SingleTickerProviderStateMixin
                 Transform.rotate(
                   angle: 0.03,
                   child: Text(
-                    'Arrows',
+                    '- Sketch',
                     style: SketchText.title.copyWith(
                       fontSize: 58,
                       color: SketchColors.yellow,

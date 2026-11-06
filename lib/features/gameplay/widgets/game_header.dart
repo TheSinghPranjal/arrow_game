@@ -43,10 +43,8 @@ class GameHeader extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               child: FittedBox(
                 fit: BoxFit.scaleDown,
-                alignment: Alignment.centerLeft,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('SCORE', style: SketchText.label),
                     TweenAnimationBuilder<int>(
@@ -67,10 +65,8 @@ class GameHeader extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
               child: FittedBox(
                 fit: BoxFit.scaleDown,
-                alignment: Alignment.centerLeft,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.min,
